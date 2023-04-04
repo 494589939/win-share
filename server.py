@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # ! conding = 'UTF-8'
 # 文件名：server.py
-from ast import literal_eval
 import socket
+from ast import literal_eval
 from os import popen
 from threading import Thread
 
@@ -93,7 +93,6 @@ def socket_server():
 
     # 获取本地主机名
     host = socket.gethostname()
-
     port = 9999
 
     # 绑定端口号
@@ -130,6 +129,7 @@ def socket_server():
 
 if __name__ == '__main__':
     try:
+        # socket_server()
         server_th = Thread(target=socket_server())
         # 设置线程为守护线程，防止退出主线程时，子线程仍在运行
         server_th.setDaemon(True)

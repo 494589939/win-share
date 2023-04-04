@@ -217,6 +217,7 @@ class Applicaltion(object):
 
 if __name__ == '__main__':
     app = Applicaltion()
+    # app.run()
     client_th = Thread(target=app.run())
     # 设置线程为守护线程，防止退出主线程时，子线程仍在运行
     client_th.setDaemon(True)
